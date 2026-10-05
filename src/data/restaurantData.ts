@@ -1,14 +1,23 @@
 import { MenuItem, Deal } from '../types/restaurant';
 
-// Image references
+// Import assets through Vite so they are fingerprinted and bundled into /dist/assets
+// instead of pointing at /src paths that only work in the development server.
+import logoImage from '../assets/images/nagori_marvi_logo_1791209725950.jpg';
+import heroSpreadImage from '../assets/images/hero_fast_food_spread_1791209615773.jpg';
+import burgersImage from '../assets/images/category_burgers_crispy_1791209646958.jpg';
+import bbqImage from '../assets/images/category_bbq_grill_1791209629091.jpg';
+import pizzaImage from '../assets/images/category_pizza_special_1791209669919.jpg';
+import rollsImage from '../assets/images/category_rolls_paratha_1791209689888.jpg';
+import karahiFriesImage from '../assets/images/dish_karahi_fries_1791209703759.jpg';
+
 export const IMAGES = {
-  logo: '/src/assets/images/nagori_marvi_logo_1791209725950.jpg',
-  heroSpread: '/src/assets/images/hero_fast_food_spread_1791209615773.jpg',
-  burgers: '/src/assets/images/category_burgers_crispy_1791209646958.jpg',
-  bbq: '/src/assets/images/category_bbq_grill_1791209629091.jpg',
-  pizza: '/src/assets/images/category_pizza_special_1791209669919.jpg',
-  rolls: '/src/assets/images/category_rolls_paratha_1791209689888.jpg',
-  karahiFries: '/src/assets/images/dish_karahi_fries_1791209703759.jpg',
+  logo: logoImage,
+  heroSpread: heroSpreadImage,
+  burgers: burgersImage,
+  bbq: bbqImage,
+  pizza: pizzaImage,
+  rolls: rollsImage,
+  karahiFries: karahiFriesImage,
 };
 
 export const RESTAURANT_INFO = {
@@ -16,8 +25,8 @@ export const RESTAURANT_INFO = {
   tagline: 'Fresh Food. Bold Flavours.',
   supportingText: 'From sizzling BBQ and juicy burgers to cheesy pizzas — enjoy your favourites from Nagori Marvi Fast Foods.',
   address: 'Plot No. N-164, Shah Latif Town, Sector 17-A, Near Mangal Bazar, Karachi, Pakistan',
-  phones: ['0311-2551108', '0330-1351108'],
-  whatsappNumber: '923112551108', // Direct international format for WhatsApp API
+  phones: ['0311-2551108', '0330-13551108'],
+  whatsappNumber: '923112551108',
   whatsappDisplay: '0311-2551108',
   openingHours: '4:00 PM - 3:00 AM (Open 7 Days a Week)',
   deliveryNote: 'Fast Home Delivery across Shah Latif Town & Surrounding Sectors',
@@ -68,7 +77,6 @@ export const POPULAR_CATEGORIES = [
   },
 ];
 
-// Demo menu selection strictly as requested
 export const FEATURED_MENU: MenuItem[] = [
   {
     id: 'zinger-burger',
@@ -174,7 +182,6 @@ export const FEATURED_MENU: MenuItem[] = [
   },
 ];
 
-// Popular deals strictly as requested
 export const POPULAR_DEALS: Deal[] = [
   {
     id: 'deal-3',
