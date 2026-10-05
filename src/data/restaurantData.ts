@@ -25,7 +25,7 @@ export const RESTAURANT_INFO = {
   tagline: 'Fresh Food. Bold Flavours.',
   supportingText: 'From sizzling BBQ and juicy burgers to cheesy pizzas — enjoy your favourites from Nagori Marvi Fast Foods.',
   address: 'Plot No. N-164, Shah Latif Town, Sector 17-A, Near Mangal Bazar, Karachi, Pakistan',
-  phones: ['0311-2551108', '0330-13551108'],
+  phones: ['0311-2551108', '0330-1351108'],
   whatsappNumber: '923112551108',
   whatsappDisplay: '0311-2551108',
   openingHours: '4:00 PM - 3:00 AM (Open 7 Days a Week)',
