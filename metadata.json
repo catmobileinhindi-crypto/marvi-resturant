@@ -1,0 +1,6 @@
+{
+  "name": "Nagori Marvi Fast Foods - Demo",
+  "description": "Premium demo website for Nagori Marvi Fast Foods featuring BBQ, burgers, pizzas, rolls, deals, and quick WhatsApp ordering in Karachi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

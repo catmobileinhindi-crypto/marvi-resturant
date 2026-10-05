@@ -1,0 +1,869 @@
+/* ==========================================================================
+   Nagori Marvi Fast Foods - Premium Dark Restaurant Theme Stylesheet
+   WordPress & Standalone Compatible
+   ========================================================================== */
+
+:root {
+  --nm-bg-dark: #0a0908;
+  --nm-bg-darker: #070605;
+  --nm-card-bg: #141210;
+  --nm-card-border: rgba(245, 158, 11, 0.25);
+  --nm-gold: #f59e0b;
+  --nm-gold-light: #fbbf24;
+  --nm-red: #dc2626;
+  --nm-red-hover: #b91c1c;
+  --nm-text-main: #f8fafc;
+  --nm-text-muted: #a8a29e;
+  --nm-font-brand: 'Cinzel', Georgia, serif;
+  --nm-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.nagori-body {
+  background-color: var(--nm-bg-dark);
+  color: var(--nm-text-main);
+  font-family: var(--nm-font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.nm-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Typography & Titles */
+.nm-hero-title,
+.nm-section-title {
+  font-family: var(--nm-font-brand);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.nm-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--nm-gold);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.nm-text-gradient {
+  background: linear-gradient(90deg, #f59e0b, #ea580c, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nm-bg-darker {
+  background-color: var(--nm-bg-darker);
+}
+
+/* Header & Navigation */
+.nm-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 9, 8, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 0.8rem 0;
+}
+
+.nm-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nm-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nm-logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--nm-gold);
+  overflow: hidden;
+  background-color: #000;
+}
+
+.nm-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nm-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nm-brand-text .nm-sub {
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: var(--nm-gold);
+  text-transform: uppercase;
+}
+
+.nm-brand-text .nm-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  font-family: var(--nm-font-brand);
+  line-height: 1.1;
+}
+
+.nm-brand-text .nm-fast {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--nm-red);
+}
+
+.nm-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nm-nav-link {
+  color: var(--nm-text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nm-nav-link:hover {
+  color: var(--nm-gold);
+}
+
+.nm-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nm-phone-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--nm-gold);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.nm-cart-btn {
+  position: relative;
+  background: #1c1917;
+  border: 1px solid #292524;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.nm-cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--nm-red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.nm-btn-primary {
+  background: linear-gradient(135deg, var(--nm-red), #b91c1c);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nm-btn-primary:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  transform: translateY(-1px);
+}
+
+.nm-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #44403c;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+}
+
+.nm-btn-outline:hover {
+  border-color: var(--nm-gold);
+}
+
+.nm-btn-whatsapp {
+  background: #10b981;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nm-btn-whatsapp:hover {
+  background: #059669;
+}
+
+.nm-btn-lg {
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+}
+
+/* Hero Section */
+.nm-hero {
+  padding: 5rem 0 4rem;
+  background: radial-gradient(circle at 80% 30%, rgba(220, 38, 38, 0.15), transparent 60%);
+}
+
+.nm-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nm-badge-pill {
+  display: inline-block;
+  background: #1c1917;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--nm-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.nm-hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.nm-hero-desc {
+  font-size: 1.1rem;
+  color: var(--nm-text-muted);
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+
+.nm-hero-ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+.nm-hero-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--nm-card-border);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.nm-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nm-hero-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(10, 9, 8, 0.9);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--nm-gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+/* Trust Strip */
+.nm-trust-strip {
+  padding: 2rem 0;
+  border-top: 1px solid #1c1917;
+  border-bottom: 1px solid #1c1917;
+  background: #0f0e0d;
+}
+
+.nm-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.nm-trust-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nm-trust-icon {
+  font-size: 1.75rem;
+}
+
+.nm-trust-card h4 {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.nm-trust-card p {
+  font-size: 0.75rem;
+  color: var(--nm-text-muted);
+}
+
+/* Sections Common */
+.nm-section {
+  padding: 5rem 0;
+}
+
+.nm-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.nm-section-header.nm-text-center {
+  text-align: center;
+}
+
+.nm-section-title {
+  font-size: 2.4rem;
+}
+
+/* Categories Grid */
+.nm-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.nm-cat-card {
+  background: var(--nm-card-bg);
+  border: 1px solid #292524;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.nm-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--nm-gold);
+}
+
+.nm-cat-img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.nm-cat-card h3 {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Filter Tabs */
+.nm-filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.nm-tab-btn {
+  background: #1c1917;
+  color: var(--nm-text-muted);
+  border: 1px solid #292524;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nm-tab-btn.active {
+  background: var(--nm-red);
+  color: #fff;
+  border-color: var(--nm-red);
+}
+
+/* Menu Grid */
+.nm-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.nm-food-card {
+  background: var(--nm-card-bg);
+  border: 1px solid #292524;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.nm-food-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--nm-card-border);
+}
+
+.nm-food-img-wrap {
+  position: relative;
+  height: 180px;
+  background: #000;
+}
+
+.nm-food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nm-food-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--nm-red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.nm-food-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nm-food-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.nm-food-desc {
+  font-size: 0.75rem;
+  color: var(--nm-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.nm-food-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid #292524;
+}
+
+.nm-food-price {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--nm-gold);
+}
+
+.nm-add-btn {
+  background: var(--nm-red);
+  color: #fff;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Deals Grid */
+.nm-deals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nm-deal-card {
+  background: #141210;
+  border: 2px solid rgba(245, 158, 11, 0.4);
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nm-deal-badge {
+  background: linear-gradient(90deg, #dc2626, #f59e0b);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.nm-deal-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.nm-deal-items {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.nm-deal-items li {
+  font-size: 0.85rem;
+  color: #d6d3d1;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #292524;
+}
+
+.nm-deal-items li::before {
+  content: "✔ ";
+  color: var(--nm-gold);
+}
+
+.nm-deal-price {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--nm-gold);
+  margin-bottom: 1rem;
+}
+
+/* About Grid */
+.nm-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nm-about-img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--nm-card-border);
+}
+
+.nm-about-text p {
+  color: #d6d3d1;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Contact / Delivery Box */
+.nm-contact-box {
+  background: #141210;
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  border-radius: 24px;
+  padding: 3rem;
+}
+
+.nm-phone-list {
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: #d6d3d1;
+}
+
+.nm-phone-list p {
+  margin-bottom: 0.5rem;
+}
+
+.nm-contact-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+.nm-footer {
+  background: #000;
+  padding: 2.5rem 0;
+  border-top: 1px solid #1c1917;
+  color: #78716c;
+  font-size: 0.85rem;
+}
+
+.nm-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Slide-out Cart Drawer */
+.nm-cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: #12100e;
+  border-left: 1px solid #292524;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nm-cart-drawer.open {
+  right: 0;
+}
+
+.nm-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+  display: none;
+}
+
+.nm-drawer-backdrop.open {
+  display: block;
+}
+
+.nm-cart-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid #292524;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nm-close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nm-cart-body {
+  flex: 1;
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.nm-cart-footer {
+  padding: 1.25rem;
+  border-top: 1px solid #292524;
+}
+
+.nm-cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.nm-w-100 {
+  width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .nm-hero-grid,
+  .nm-about-grid {
+    grid-template-columns: 1fr;
+  }
+  .nm-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nm-deals-grid {
+    grid-template-columns: 1fr;
+  }
+  .nm-categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nm-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nm-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nm-section {
+    padding: 2.5rem 0;
+  }
+  .nm-section-title {
+    font-size: 1.75rem;
+  }
+  .nm-section-header {
+    margin-bottom: 1.5rem;
+  }
+  .nm-hero {
+    padding: 2.5rem 0 1.5rem;
+  }
+  .nm-hero-title {
+    font-size: 2rem;
+  }
+  .nm-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  .nm-food-img-wrap {
+    height: 125px;
+  }
+  .nm-food-body {
+    padding: 0.65rem;
+  }
+  .nm-food-title {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nm-food-desc {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  .nm-food-price {
+    font-size: 0.85rem;
+  }
+  .nm-add-btn {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.55rem;
+  }
+  .nm-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  .nm-cat-card {
+    padding: 0.65rem;
+  }
+  .nm-cat-img {
+    height: 85px;
+  }
+  .nm-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  .nm-trust-card {
+    gap: 0.5rem;
+  }
+  .nm-trust-icon {
+    font-size: 1.3rem;
+  }
+  .nm-contact-box {
+    padding: 1.25rem;
+  }
+  .nm-contact-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .nm-btn-primary,
+  .nm-btn-whatsapp {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* Floating WhatsApp Button (Clean & Static) */
+.nm-floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nm-floating-whatsapp:hover {
+  background: #10b981;
+}
+
+.nm-whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+

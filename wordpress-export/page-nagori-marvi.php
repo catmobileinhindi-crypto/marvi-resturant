@@ -1,0 +1,245 @@
+<?php
+/**
+ * Template Name: Nagori Marvi Fast Foods
+ * Description: Premium Dark Fast Food & BBQ Restaurant Landing Page Template
+ * Author: AI Studio Build for Nagori Marvi Fast Foods
+ * Version: 1.0.0
+ */
+
+get_header(); ?>
+
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nagori Marvi Fast Foods | Fresh Food. Bold Flavours.</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+  <!-- Standalone Stylesheet -->
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/nagori-marvi/style.css">
+  <?php wp_head(); ?>
+</head>
+
+<body class="nagori-body">
+
+<div id="nagori-marvi-standalone-root">
+  <!-- Top Header -->
+  <header class="nm-header" id="nm-header">
+    <div class="nm-container nm-header-inner">
+      <a href="#home" class="nm-brand">
+        <div class="nm-logo-circle">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/nagori-marvi/images/logo.jpg" alt="Nagori Marvi Fast Foods Logo" class="nm-logo-img" />
+        </div>
+        <div class="nm-brand-text">
+          <span class="nm-sub">= NAGORI =</span>
+          <span class="nm-title">MARVI <small>👑</small></span>
+          <span class="nm-fast">FAST FOODS</span>
+        </div>
+      </a>
+
+      <nav class="nm-nav">
+        <a href="#home" class="nm-nav-link">Home</a>
+        <a href="#categories" class="nm-nav-link">Categories</a>
+        <a href="#menu" class="nm-nav-link">Menu</a>
+        <a href="#deals" class="nm-nav-link">Deals</a>
+        <a href="#about" class="nm-nav-link">About</a>
+        <a href="#contact" class="nm-nav-link">Contact</a>
+      </nav>
+
+      <div class="nm-header-actions">
+        <button id="nm-cart-toggle" class="nm-cart-btn" aria-label="Cart">
+          🛒 <span id="nm-cart-badge" class="nm-cart-badge">0</span>
+        </button>
+        <a href="#menu" class="nm-btn-primary">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="nm-hero">
+    <div class="nm-container nm-hero-grid">
+      <div class="nm-hero-copy">
+        <div class="nm-badge-pill">🔥 Karachi's Sizzling Fast Food & BBQ · Open till 3 AM</div>
+        <h1 class="nm-hero-title">Fresh Food.<br><span class="nm-text-gradient">Bold Flavours.</span></h1>
+        <p class="nm-hero-desc">
+          From sizzling BBQ and juicy burgers to cheesy pizzas — enjoy your favourites from <strong>Nagori Marvi Fast Foods</strong>.
+        </p>
+        <div class="nm-hero-ctas">
+          <a href="#menu" class="nm-btn-primary nm-btn-lg">ORDER NOW</a>
+          <a href="#menu" class="nm-btn-outline nm-btn-lg">VIEW MENU</a>
+        </div>
+      </div>
+      <div class="nm-hero-visual">
+        <div class="nm-hero-img-wrap">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/nagori-marvi/images/hero-spread.jpg" alt="Nagori Marvi Feast" class="nm-hero-img" />
+          <div class="nm-hero-tag">Special Chef Selection · Rs. 1,199</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="nm-trust-strip">
+    <div class="nm-container nm-trust-grid">
+      <div class="nm-trust-card">
+        <span class="nm-trust-icon">👨‍🍳</span>
+        <div>
+          <h4>Freshly Prepared</h4>
+          <p>Cooked fresh on order with authentic spices.</p>
+        </div>
+      </div>
+      <div class="nm-trust-card">
+        <span class="nm-trust-icon">✨</span>
+        <div>
+          <h4>Premium Taste</h4>
+          <p>Signature marinades and secret charcoal spices.</p>
+        </div>
+      </div>
+      <div class="nm-trust-card">
+        <span class="nm-trust-icon">🛵</span>
+        <div>
+          <h4>Home Delivery</h4>
+          <p>Shah Latif Town & Sector 17-A doorstep service.</p>
+        </div>
+      </div>
+      <div class="nm-trust-card">
+        <span class="nm-trust-icon">⚡</span>
+        <div>
+          <h4>Fast Service</h4>
+          <p>Piping hot insulated packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section id="categories" class="nm-section">
+    <div class="nm-container">
+      <div class="nm-section-header">
+        <div>
+          <span class="nm-kicker">EXPLORE MENU</span>
+          <h2 class="nm-section-title">Popular Categories</h2>
+        </div>
+      </div>
+      <div class="nm-categories-grid" id="nm-categories-container">
+        <!-- Rendered via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Menu -->
+  <section id="menu" class="nm-section nm-bg-darker">
+    <div class="nm-container">
+      <div class="nm-section-header nm-text-center">
+        <span class="nm-kicker">TASTE THE SIZZLE</span>
+        <h2 class="nm-section-title">Featured Menu</h2>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="nm-filter-tabs" id="nm-filter-tabs">
+        <button class="nm-tab-btn active" data-filter="all">All Items</button>
+        <button class="nm-tab-btn" data-filter="burgers">Burgers</button>
+        <button class="nm-tab-btn" data-filter="bbq">BBQ & Karahi</button>
+        <button class="nm-tab-btn" data-filter="pizza">Special Pizza</button>
+        <button class="nm-tab-btn" data-filter="rolls">Paratha Rolls</button>
+        <button class="nm-tab-btn" data-filter="sandwiches">Sandwiches</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="nm-menu-grid" id="nm-menu-container">
+        <!-- Rendered via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Deals Section -->
+  <section id="deals" class="nm-section">
+    <div class="nm-container">
+      <div class="nm-section-header nm-text-center">
+        <span class="nm-kicker">EXCLUSIVE COMBOS</span>
+        <h2 class="nm-section-title">Popular Deals</h2>
+      </div>
+      <div class="nm-deals-grid" id="nm-deals-container">
+        <!-- Rendered via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="nm-section nm-bg-darker">
+    <div class="nm-container nm-about-grid">
+      <div class="nm-about-media">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/nagori-marvi/images/bbq.jpg" alt="Nagori Marvi BBQ" class="nm-about-img" />
+      </div>
+      <div class="nm-about-text">
+        <span class="nm-kicker">ABOUT NAGORI MARVI</span>
+        <h2 class="nm-section-title">Taste That Brings People Together</h2>
+        <p>
+          Nagori Marvi Fast Foods serves a wide variety of fast food, BBQ, burgers, pizzas, rolls and family deals. Our goal is simple — great taste, satisfying portions and food made for every craving.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery / Contact Section -->
+  <section id="contact" class="nm-section">
+    <div class="nm-container nm-contact-box">
+      <div class="nm-contact-details">
+        <h2 class="nm-section-title">Ready To Order?</h2>
+        <p>Call our delivery lines or tap below to order directly via WhatsApp.</p>
+        
+        <div class="nm-phone-list">
+          <p><strong>Hotlines:</strong> 0311-2551108 / 0330-1351108</p>
+          <p><strong>Address:</strong> Plot No. N-164, Shah Latif Town, Sector 17-A, Near Mangal Bazar, Karachi, Pakistan</p>
+        </div>
+
+        <div class="nm-contact-ctas">
+          <a href="tel:03112551108" class="nm-btn-primary">CALL NOW</a>
+          <a href="https://wa.me/923112551108?text=Assalam-o-Alaikum%20Nagori%20Marvi%20Fast%20Foods!%20I%20want%20to%20order." target="_blank" class="nm-btn-whatsapp">ORDER ON WHATSAPP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="nm-footer">
+    <div class="nm-container nm-footer-inner">
+      <p>© <?php echo date('Y'); ?> Nagori Marvi Fast Foods. All Rights Reserved.</p>
+      <p>0311-2551108 | 0330-1351108</p>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="nm-cart-drawer" class="nm-cart-drawer">
+    <div class="nm-cart-header">
+      <h3>Your Food Cart</h3>
+      <button id="nm-cart-close" class="nm-close-btn">&times;</button>
+    </div>
+    <div id="nm-cart-items" class="nm-cart-body"></div>
+    <div class="nm-cart-footer">
+      <div class="nm-cart-total-row">
+        <span>Total:</span>
+        <span id="nm-cart-total-price">Rs. 0</span>
+      </div>
+      <button id="nm-whatsapp-checkout-btn" class="nm-btn-whatsapp nm-w-100">Send Order to WhatsApp</button>
+    </div>
+  </div>
+  <div id="nm-drawer-backdrop" class="nm-drawer-backdrop"></div>
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/923112551108?text=Assalam-o-Alaikum%20Nagori%20Marvi%20Fast%20Foods!%20I%20want%20to%20order." class="nm-floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+    <svg class="nm-whatsapp-icon" viewBox="0 0 24 24">
+      <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.97.57 3.86 1.65 5.48L2 22l4.63-1.61c1.57.99 3.39 1.51 5.37 1.51 5.536 0 10.031-4.495 10.031-10.031C22.062 6.495 17.567 2 12.031 2zm0 18.36c-1.74 0-3.37-.5-4.78-1.42l-.34-.22-2.76.96.98-2.69-.23-.37c-1.02-1.48-1.57-3.23-1.57-5.04 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.46 8.38zm4.59-6.28c-.25-.13-1.49-.74-1.72-.82-.23-.08-.4-.13-.57.13-.17.25-.66.82-.81.99-.15.17-.3.19-.55.06-.25-.13-1.07-.39-2.04-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43h-.49c-.17 0-.45.06-.68.32-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.13.17 1.79 2.73 4.33 3.83.6.26 1.08.42 1.45.53.61.2 1.16.17 1.6.1.49-.07 1.49-.61 1.7-1.2.21-.59.21-1.1.15-1.2-.06-.11-.23-.17-.48-.29z" fill="#ffffff" />
+    </svg>
+  </a>
+</div>
+
+<!-- Standalone JS -->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/nagori-marvi/script.js"></script>
+<?php wp_footer(); ?>
+</body>
+</html>
